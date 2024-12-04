@@ -1,1 +1,32 @@
-# This file will contain a script in orde to start up the system (all microservices) 
+# This file will contain a script in order to start up the system (all microservices)
+
+version: "3.3"
+
+services:
+  postservice-db:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: 'postservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./postservice_db.sql:/docker-entrypoint-initdb.d/0_init.sql
+  reviewservice-db:
+    image: mysql:latest
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_DATABASE: 'reviewservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./reviewservice_db.sql:/docker-entrypoint-initdb.d/0_init.sql
+  commentservice-db:
+    image: mysql:latest
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_DATABASE: 'commentservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./commentservice_db.sql:/docker-entrypoint-initdb.d/0_init.sql
