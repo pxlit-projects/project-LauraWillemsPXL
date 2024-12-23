@@ -1,7 +1,5 @@
 # This file will contain a script in order to start up the system (all microservices)
 
-version: "3.3"
-
 services:
   postservice-db:
     image: mysql:latest

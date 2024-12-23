@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/post")
 @RequiredArgsConstructor
 public class PostController {
-    private final IPostService postService;
+    //private final IPostService postService;
 }
