@@ -1,0 +1,15 @@
+<div class="container">
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+  <div class="form-container">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+      <h2>Add Post</h2>
+      <label for="title">Title</label>
+      <input class="input" type="text" id="title" formControlName="title">
+      <label for="content">Content</label>
+      <textarea id="content" formControlName="content"></textarea>
+      <button type="submit" class="button-blue" [disabled]="!postForm.valid">PUBLISH POST</button>
+    </form>
+  </div>
+</div>

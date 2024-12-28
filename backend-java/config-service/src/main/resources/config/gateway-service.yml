@@ -5,15 +5,16 @@ logging:
   level:
     org.springframework.cloud.gateway: DEBUG
     org.springframework.cloud.netflix.eureka: DEBUG
+    org.springframework.web.cors: DEBUG
 
 spring:
   cloud:
     gateway:
       globalcors:
-        corsConfiguration:
+        cors-configurations:
           '[/**]':
             allowedOrigins:
-              - "localhost"
+              - "http://localhost:4200"
             allowedMethods:
               - "*"
             allowedHeaders:

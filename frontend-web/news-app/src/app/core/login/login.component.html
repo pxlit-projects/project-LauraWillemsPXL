@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="login-container">
+    <h1>LOGIN</h1>
+    <div class="form-container">
+      <form (ngSubmit)="login()">
+        <label for="firstName">First Name</label>
+        <input class="input" type="text" id="firstName" name="firstName" [(ngModel)]="firstName">
+        <label for="lastName">Last Name</label>
+        <input class="input" type="text" id="lastName" name="lastName" [(ngModel)]="lastName">
+        <label for="userRole">User Role</label>
+        <select name="userRole" id="userRole" class="select" [(ngModel)]="userRole">
+          <option value="editor-in-chief">Editor-in-Chief</option>
+          <option value="editor">Editor</option>
+          <option value="user">User</option>
+        </select>
+        <button type="submit" class="button-blue" [disabled]="userRole == '' || firstName == '' || lastName == ''">LOGIN</button>
+      </form>
+    </div>
+  </div>
+</div>
+

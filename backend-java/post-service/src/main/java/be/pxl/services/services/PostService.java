@@ -8,9 +8,8 @@ import be.pxl.services.services.interfaces.IPostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -23,7 +22,7 @@ public class PostService implements IPostService {
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
                 .author(postRequest.getAuthor())
-                .publishedDate(LocalDate.now())
+                .publishedDate(new Date())
                 .build();
 
         postRepository.save(post);
@@ -35,5 +34,33 @@ public class PostService implements IPostService {
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
                 .build();
+    }
+
+    @Override
+    public List<PostResponse> getAllPosts(String userRole, String userName) {
+        if (userRole.equals("editor")) {
+            List<Post> posts = postRepository.findAll().stream()
+                    .filter(post -> post.getAuthor().equals(userName))
+                    .toList();
+
+            return posts.stream().map(post -> PostResponse.builder()
+                    .id(post.getId())
+                    .title(post.getTitle())
+                    .content(post.getContent())
+                    .author(post.getAuthor())
+                    .publishedDate(post.getPublishedDate())
+                    .build())
+                    .toList();
+        }
+
+        List<Post> posts = postRepository.findAll();
+        return posts.stream().map(post -> PostResponse.builder()
+                .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .author(post.getAuthor())
+                .publishedDate(post.getPublishedDate())
+                .build())
+                .toList();
     }
 }

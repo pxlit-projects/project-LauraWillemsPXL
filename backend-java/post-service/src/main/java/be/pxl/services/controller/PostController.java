@@ -7,10 +7,9 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/post")
@@ -21,5 +20,11 @@ public class PostController {
     @PostMapping
     public ResponseEntity<PostResponse> addPost(@RequestBody @Valid PostRequest postRequest) {
         return new ResponseEntity<>(postService.addPost(postRequest), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<PostResponse>> getAllPosts(@RequestHeader(value = "User-Role") String userRole,
+                                            @RequestHeader(value = "User-Name") String userName) {
+        return new ResponseEntity<>(postService.getAllPosts(userRole, userName), HttpStatus.OK);
     }
 }
