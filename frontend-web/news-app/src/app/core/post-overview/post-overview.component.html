@@ -3,9 +3,11 @@
    <app-navbar></app-navbar>
  </nav>
   <div class="posts-container">
-    <mat-card appearance="outlined" class="add-post-card" (click)="onAddPostClick()">
-      <span>ADD POST</span>
-    </mat-card>
+    @if (role == "editor") {
+      <mat-card appearance="outlined" class="add-post-card" (click)="onAddPostClick()">
+        <span>ADD POST</span>
+      </mat-card>
+    }
     @for (post of posts; track post.id) {
       <app-post-card [id]="post.id"
                      [title]="post.title"

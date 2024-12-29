@@ -45,7 +45,8 @@ public class PostService implements IPostService {
     @Override
     public List<PostResponse> getAllPosts(String userRole, String userName) {
         if (userRole.equals("editor")) {
-            List<Post> posts = postRepository.findAll().stream()
+            List<Post> posts = postRepository.findAll()
+                    .stream()
                     .filter(post -> post.getAuthor().equals(userName) && !post.isDraft())
                     .toList();
 
@@ -61,7 +62,11 @@ public class PostService implements IPostService {
                     .toList();
         }
 
-        List<Post> posts = postRepository.findAll();
+        List<Post> posts = postRepository.findAll()
+                .stream()
+                .filter(post -> !post.isDraft())
+                .toList();
+
         return posts.stream().map(post -> PostResponse.builder()
                 .id(post.getId())
                 .title(post.getTitle())

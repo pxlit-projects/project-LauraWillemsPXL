@@ -6,6 +6,11 @@
       <li (click)="onDraftsClick()">Drafts</li>
     </ul>
   }
+  @if (userRole === "user") {
+    <ul>
+      <li (click)="onPostsClick()">Posts</li>
+    </ul>
+  }
   <div class="logout" (click)="logout()">
     LOGOUT
   </div>
