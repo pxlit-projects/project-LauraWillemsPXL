@@ -1,0 +1,26 @@
+.drafts-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 16px;
+}
+
+.draft-card {
+  background-color: white;
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+}
+
+.draft-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.draft-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+}

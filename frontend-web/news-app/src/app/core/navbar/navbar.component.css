@@ -12,8 +12,26 @@ img {
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin-right: 25px;
+  font-size: large;
 }
 
 li:hover {
   cursor: pointer;
+}
+
+.logout {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: auto;
+  background-color: red;
+  color: white;
+  border: 1px solid darkred;
+  border-radius: 10px;
 }

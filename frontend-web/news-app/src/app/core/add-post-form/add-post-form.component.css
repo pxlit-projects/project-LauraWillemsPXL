@@ -34,4 +34,16 @@ textarea {
   width: 750px;
   height: 250px;
   font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.is-draft-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.is-draft-label {
+  margin-left: 5px;
 }

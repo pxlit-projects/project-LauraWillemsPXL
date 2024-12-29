@@ -24,6 +24,11 @@ export class AuthService {
     return this.userName;
   }
 
+  logout() {
+    this.userRole = "";
+    this.userName = "";
+  }
+
   getHeaders(): HttpHeaders {
     let headers = new HttpHeaders();
     headers = headers.set('user-role', this.getUserRole());

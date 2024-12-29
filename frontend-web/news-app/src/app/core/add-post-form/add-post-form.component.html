@@ -9,6 +9,10 @@
       <input class="input" type="text" id="title" formControlName="title">
       <label for="content">Content</label>
       <textarea id="content" formControlName="content"></textarea>
+      <div class="is-draft-checkbox">
+        <input type="checkbox" id="isDraft" formControlName="isDraft">
+        <label class="is-draft-label" for="isDraft">Is Draft</label>
+      </div>
       <button type="submit" class="button-blue" [disabled]="!postForm.valid">PUBLISH POST</button>
     </form>
   </div>

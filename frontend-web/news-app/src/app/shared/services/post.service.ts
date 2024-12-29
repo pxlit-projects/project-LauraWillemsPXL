@@ -15,11 +15,17 @@ export class PostService {
 
   addPost(postRequest: PostRequest) {
     const headers = this.authService.getHeaders();
+    console.log(postRequest);
     return this.http.post<Post>(`${environment.api}/post/api/post`, postRequest, { headers });
   }
 
   getAllPosts() {
     const headers = this.authService.getHeaders();
     return this.http.get<Post[]>(`${environment.api}/post/api/post`, { headers });
+  }
+
+  getAllDrafts() {
+    const headers = this.authService.getHeaders();
+    return this.http.get<Post[]>(`${environment.api}/post/api/post/drafts`, { headers });
   }
 }

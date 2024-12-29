@@ -1,6 +1,12 @@
 <nav>
   <img src="fullstack-java-logo.jpg">
-  <ul>
-    <li (click)="onPostsClick()">Posts</li>
-  </ul>
+  @if (userRole === "editor") {
+    <ul>
+      <li (click)="onPostsClick()">Posts</li>
+      <li (click)="onDraftsClick()">Drafts</li>
+    </ul>
+  }
+  <div class="logout" (click)="logout()">
+    LOGOUT
+  </div>
 </nav>

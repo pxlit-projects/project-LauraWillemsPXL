@@ -28,13 +28,17 @@ export class AddPostFormComponent {
   postForm: FormGroup = this.fb.group({
     title: ['', Validators.required],
     content: ['', Validators.required],
+    isDraft: [false],
   });
 
   onSubmit(): void {
     let title = this.postForm.get('title')?.value;
     let content = this.postForm.get('content')?.value;
+    let isDraft = this.postForm.get('isDraft')?.value;
 
-    this.postService.addPost(new PostRequest(title, content, this.authService.getUserName())).subscribe({
+    console.log('is draft: ', isDraft);
+
+    this.postService.addPost(new PostRequest(title, content, this.authService.getUserName(), isDraft)).subscribe({
       next: () => {
         this.router.navigate(['/posts']);
       },

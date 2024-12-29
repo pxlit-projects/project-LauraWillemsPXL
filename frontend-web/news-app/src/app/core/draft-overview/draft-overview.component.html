@@ -1,0 +1,17 @@
+<div class="container">
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+  <div class="drafts-container">
+    @for (draft of drafts; track draft.id) {
+      <mat-card appearance="outlined" class="draft-card">
+        <mat-card-header>
+          <mat-card-title class="draft-title">{{draft.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="draft-content">{{draft.content}}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</div>
