@@ -10,4 +10,6 @@ public interface IPostService {
     List<PostResponse> getAllPosts(String userRole, String userName);
     PostResponse getPostById(Long id);
     List<PostResponse> getAllDrafts(String userRole, String userName);
+    PostResponse updateDraft(Long id, PostRequest postRequest, String userRole, String userName);
+    void deleteDraft(Long id, String userRole, String userName);
 }

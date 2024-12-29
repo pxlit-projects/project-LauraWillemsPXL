@@ -106,4 +106,49 @@ public class PostService implements IPostService {
             throw new PermissionDeniedException("You are not allowed to view drafts");
         }
     }
+
+    @Override
+    public PostResponse updateDraft(Long id, PostRequest postRequest, String userRole, String userName) {
+        Post post = postRepository.findById(id).orElse(null);
+
+        if (post == null) {
+            throw new ResourceNotFoundException("Post not found");
+        }
+
+        if (!post.getAuthor().equals(userName) && !userRole.equals("editor")) {
+            throw new PermissionDeniedException("You are not allowed to update this post");
+        }
+
+        post.setTitle(postRequest.getTitle());
+        post.setContent(postRequest.getContent());
+        post.setAuthor(postRequest.getAuthor());
+        post.setPublishedDate(new Date());
+        post.setDraft(postRequest.isDraft());
+
+        postRepository.save(post);
+
+        return PostResponse.builder()
+                 .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .author(post.getAuthor())
+                .publishedDate(post.getPublishedDate())
+                .isDraft(post.isDraft())
+                .build();
+    }
+
+    @Override
+    public void deleteDraft(Long id, String userRole, String userName) {
+        Post post = postRepository.findById(id).orElse(null);
+
+        if (post == null) {
+            throw new ResourceNotFoundException("Post not found");
+        }
+
+        if (!post.getAuthor().equals(userName) && !userRole.equals("editor")) {
+            throw new PermissionDeniedException("You are not allowed to delete this post");
+        }
+
+        postRepository.delete(post);
+    }
 }
