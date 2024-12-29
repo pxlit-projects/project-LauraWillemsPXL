@@ -7,6 +7,9 @@
       <mat-card appearance="outlined" class="draft-card">
         <mat-card-header>
           <mat-card-title class="draft-title">{{draft.title}}</mat-card-title>
+          <div class="edit-button" (click)="goToDetailPage(draft.id)">
+            <img src="edit.svg">
+          </div>
         </mat-card-header>
         <mat-card-content>
           <p class="draft-content">{{draft.content}}</p>

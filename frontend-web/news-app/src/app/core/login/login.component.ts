@@ -20,8 +20,7 @@ export class LoginComponent {
   userRole: string = "";
 
   login(): void {
-    this.authService.setUserName(this.firstName, this.lastName);
-    this.authService.setUserRole(this.userRole);
+    this.authService.login(this.firstName, this.lastName, this.userRole);
     this.router.navigate(['/posts']);
   }
 }

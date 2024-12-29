@@ -32,6 +32,6 @@ li:hover {
   margin-left: auto;
   background-color: red;
   color: white;
-  border: 1px solid darkred;
+  border: 1px solid red;
   border-radius: 10px;
 }

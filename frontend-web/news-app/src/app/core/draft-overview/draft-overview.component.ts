@@ -4,13 +4,15 @@ import {PostService} from "../../shared/services/post.service";
 import {Post} from "../../shared/model/post.model";
 import {NavbarComponent} from "../navbar/navbar.component";
 import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-draft-overview',
   standalone: true,
   imports: [
     NavbarComponent,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   templateUrl: './draft-overview.component.html',
   styleUrl: './draft-overview.component.css'
@@ -24,5 +26,9 @@ export class DraftOverviewComponent implements OnInit {
     this.postService.getAllDrafts().subscribe(response => {
       this.drafts = response;
     });
+  }
+
+  goToDetailPage(id: number): void {
+    this.router.navigate([`/posts/drafts/${id}`]);
   }
 }
