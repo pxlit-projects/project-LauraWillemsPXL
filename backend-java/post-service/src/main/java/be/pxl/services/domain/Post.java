@@ -20,6 +20,7 @@ public class Post {
     private String title;
 
     @Lob
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     private String author;

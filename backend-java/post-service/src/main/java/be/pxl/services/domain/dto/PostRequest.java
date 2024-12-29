@@ -1,5 +1,6 @@
 package be.pxl.services.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,5 +21,6 @@ public class PostRequest {
     @NotBlank
     private String author;
 
+    @JsonProperty("isDraft")
     private boolean isDraft;
 }
