@@ -27,4 +27,15 @@ public class PostController {
                                             @RequestHeader(value = "User-Name") String userName) {
         return new ResponseEntity<>(postService.getAllPosts(userRole, userName), HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PostResponse> getPostById(@PathVariable Long id) {
+        return new ResponseEntity<>(postService.getPostById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/drafts")
+    public ResponseEntity<List<PostResponse>> getAllDrafts(@RequestHeader(value = "User-Role") String userRole,
+                                            @RequestHeader(value = "User-Name") String userName) {
+        return new ResponseEntity<>(postService.getAllDrafts(userRole, userName), HttpStatus.OK);
+    }
 }

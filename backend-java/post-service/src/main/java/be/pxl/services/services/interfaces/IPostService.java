@@ -8,4 +8,6 @@ import java.util.List;
 public interface IPostService {
     PostResponse addPost(PostRequest postRequest);
     List<PostResponse> getAllPosts(String userRole, String userName);
+    PostResponse getPostById(Long id);
+    List<PostResponse> getAllDrafts(String userRole, String userName);
 }

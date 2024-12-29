@@ -20,10 +20,11 @@ public class Post {
     private String title;
 
     @Lob
-    @Column(columnDefinition = "TEXT")
     private String content;
 
     private String author;
 
     private Date publishedDate;
+
+    private boolean isDraft;
 }

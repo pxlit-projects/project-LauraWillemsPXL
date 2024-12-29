@@ -3,6 +3,8 @@ package be.pxl.services.services;
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
+import be.pxl.services.exceptions.PermissionDeniedException;
+import be.pxl.services.exceptions.ResourceNotFoundException;
 import be.pxl.services.repository.IPostRepository;
 import be.pxl.services.services.interfaces.IPostService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +25,7 @@ public class PostService implements IPostService {
                 .content(postRequest.getContent())
                 .author(postRequest.getAuthor())
                 .publishedDate(new Date())
+                .isDraft(postRequest.isDraft())
                 .build();
 
         postRepository.save(post);
@@ -33,6 +36,7 @@ public class PostService implements IPostService {
                 .content(post.getContent())
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
+                .isDraft(post.isDraft())
                 .build();
     }
 
@@ -40,7 +44,7 @@ public class PostService implements IPostService {
     public List<PostResponse> getAllPosts(String userRole, String userName) {
         if (userRole.equals("editor")) {
             List<Post> posts = postRepository.findAll().stream()
-                    .filter(post -> post.getAuthor().equals(userName))
+                    .filter(post -> post.getAuthor().equals(userName) && !post.isDraft())
                     .toList();
 
             return posts.stream().map(post -> PostResponse.builder()
@@ -62,5 +66,44 @@ public class PostService implements IPostService {
                 .publishedDate(post.getPublishedDate())
                 .build())
                 .toList();
+    }
+
+    @Override
+    public PostResponse getPostById(Long id) {
+        Post post = postRepository.findById(id).orElse(null);
+
+        if (post == null) {
+            throw new ResourceNotFoundException("Post not found");
+        }
+
+        return PostResponse.builder()
+                .id(post.getId())
+                .title(post.getTitle())
+                .content(post.getContent())
+                .author(post.getAuthor())
+                .publishedDate(post.getPublishedDate())
+                .build();
+    }
+
+    @Override
+    public List<PostResponse> getAllDrafts(String userRole, String userName) {
+        if (userRole.equals("editor")) {
+            List<Post> posts = postRepository.findAll().stream()
+                    .filter(post -> post.getAuthor().equals(userName) && post.isDraft())
+                    .toList();
+
+            return posts.stream().map(post -> PostResponse.builder()
+                            .id(post.getId())
+                            .title(post.getTitle())
+                            .content(post.getContent())
+                            .author(post.getAuthor())
+                            .publishedDate(post.getPublishedDate())
+                            .build())
+                    .toList();
+        }
+        else
+        {
+            throw new PermissionDeniedException("You are not allowed to view drafts");
+        }
     }
 }

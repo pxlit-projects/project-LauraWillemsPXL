@@ -16,4 +16,5 @@ public class PostResponse {
     private String content;
     private String author;
     private Date publishedDate;
+    private boolean isDraft;
 }
