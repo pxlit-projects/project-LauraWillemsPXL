@@ -6,6 +6,7 @@ import {PostService} from "../../shared/services/post.service";
 import {Post} from "../../shared/model/post.model";
 import {MatChipsModule} from "@angular/material/chips";
 import {DatePipe} from "@angular/common";
+import {PostCardComponent} from "../post-card/post-card.component";
 
 @Component({
   selector: 'app-post-overview',
@@ -14,7 +15,8 @@ import {DatePipe} from "@angular/common";
     NavbarComponent,
     MatCardModule,
     MatChipsModule,
-    DatePipe
+    DatePipe,
+    PostCardComponent
   ],
   templateUrl: './post-overview.component.html',
   styleUrl: './post-overview.component.css'

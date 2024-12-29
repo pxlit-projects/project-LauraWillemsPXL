@@ -1,0 +1,23 @@
+<mat-card appearance="outlined" class="card">
+  <mat-card-header>
+    <mat-card-title class="title">{{title}}</mat-card-title>
+    @if (isDraft) {
+      <div class="edit-button" (click)="onEditClick()">
+        <img src="edit.svg">
+      </div>
+    }
+  </mat-card-header>
+  <mat-card-content>
+    <p class="content">{{content}}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="tags-container">
+      @for (tag of tags; track tag) {
+        <p class="tag">{{tag}}</p>
+      }
+    </div>
+    @if (!isDraft) {
+      <p class="author">By {{author}} ~ {{publishedDate | date: 'dd/MM/yyyy'}}</p>
+    }
+  </mat-card-footer>
+</mat-card>

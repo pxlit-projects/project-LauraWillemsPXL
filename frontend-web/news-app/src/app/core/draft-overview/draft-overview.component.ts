@@ -5,6 +5,7 @@ import {Post} from "../../shared/model/post.model";
 import {NavbarComponent} from "../navbar/navbar.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import {PostCardComponent} from "../post-card/post-card.component";
 
 @Component({
   selector: 'app-draft-overview',
@@ -12,7 +13,8 @@ import {MatIconModule} from "@angular/material/icon";
   imports: [
     NavbarComponent,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    PostCardComponent
   ],
   templateUrl: './draft-overview.component.html',
   styleUrl: './draft-overview.component.css'
@@ -25,10 +27,9 @@ export class DraftOverviewComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getAllDrafts().subscribe(response => {
       this.drafts = response;
+      for (let draft of this.drafts) {
+        console.log(draft);
+      }
     });
-  }
-
-  goToDetailPage(id: number): void {
-    this.router.navigate([`/posts/drafts/${id}`]);
   }
 }

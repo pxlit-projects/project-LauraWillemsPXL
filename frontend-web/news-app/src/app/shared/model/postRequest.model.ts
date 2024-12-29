@@ -1,13 +1,15 @@
 export class PostRequest {
   title: string;
   content: string;
+  tags: string[];
   author: string;
-  isDraft: boolean;
+  draft: boolean;
 
-  constructor(title: string, content: string, author: string, isDraft: boolean) {
+  constructor(title: string, content: string, tags: string[], author: string, draft: boolean) {
     this.title = title;
     this.content = content;
+    this.tags = tags;
     this.author = author;
-    this.isDraft = isDraft;
+    this.draft = draft;
   }
 }

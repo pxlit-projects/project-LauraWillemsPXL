@@ -26,11 +26,13 @@ export class DraftDetailsComponent implements OnInit{
   router: Router = inject(Router);
   fb: FormBuilder = inject(FormBuilder);
   postForm!: FormGroup;
+  tags: string[] = [];
 
   ngOnInit(): void {
     this.draftId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.postService.getPostById(this.draftId).subscribe(response => {
       this.draft = response;
+      this.tags = this.draft.tags;
       this.initializeForm();
     })
   }
@@ -39,14 +41,34 @@ export class DraftDetailsComponent implements OnInit{
     this.postForm = this.fb.group({
       title: [this.draft.title, Validators.required],
       content: [this.draft.content, Validators.required],
+      tags: [this.draft.tags, Validators.required],
     })
+  }
+
+  addTag(event: KeyboardEvent): void {
+    const input = event.target as HTMLInputElement;
+    const value = input.value.trim();
+
+    if ((event.key === ' ') && value) {
+      if (!this.tags.includes(value)) {
+        this.tags.push(value);
+        this.postForm.get('tags')?.setValue(this.tags.join(','));
+        input.value = '';
+      }
+    }
+  }
+
+  removeTag(tag: string): void {
+    this.tags = this.tags.filter((t) => t !== tag);
+    this.postForm.get('tags')?.setValue(this.tags.join(','));
   }
 
   updateDraft(): void {
     let title = this.postForm.get('title')?.value;
     let content = this.postForm.get('content')?.value;
+    let tags = this.postForm.get('tags')?.value;
 
-    this.postService.updateDraft(this.draftId, new PostRequest(title, content, this.authService.getUserName(), true)).subscribe(response => {
+    this.postService.updateDraft(this.draftId, new PostRequest(title, content, tags, this.authService.getUserName(), true)).subscribe(response => {
       this.router.navigate(['/drafts']);
     });
   }
@@ -54,8 +76,9 @@ export class DraftDetailsComponent implements OnInit{
   onSubmit() {
     let title = this.postForm.get('title')?.value;
     let content = this.postForm.get('content')?.value;
+    let tags = this.postForm.get('tags')?.value;
 
-    this.postService.addPost(new PostRequest(title, content, this.authService.getUserName(), false)).subscribe({
+    this.postService.addPost(new PostRequest(title, content, tags, this.authService.getUserName(), false)).subscribe({
       next: () => {
         this.postService.deleteDraft(this.draftId).subscribe();
         this.router.navigate(['/posts']);

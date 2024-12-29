@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+
 <div class="container">
   <nav>
     <app-navbar></app-navbar>
@@ -9,6 +11,16 @@
       <input class="input" type="text" id="title" formControlName="title">
       <label for="content">Content</label>
       <textarea id="content" formControlName="content"></textarea>
+      <label>Tags</label>
+      <div class="tags">
+        <p>Place a space after each tag</p>
+        <ul>
+          @for (tag of tags; track tags.indexOf(tag)) {
+            <li>{{ tag }} <span class="material-symbols-outlined" (click)="removeTag(tag)">close</span></li>
+          }
+          <input type="text" (keydown)="addTag($event)">
+        </ul>
+      </div>
       <div class="is-draft-checkbox">
         <input type="checkbox" id="isDraft" formControlName="isDraft">
         <label class="is-draft-label" for="isDraft">Is Draft</label>

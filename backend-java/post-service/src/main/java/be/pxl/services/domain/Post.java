@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -23,9 +24,13 @@ public class Post {
     @Column(columnDefinition = "TEXT")
     private String content;
 
+    @ElementCollection
+    private List<String> tags;
+
     private String author;
 
     private Date publishedDate;
 
+    @Column(name = "is_draft")
     private boolean isDraft;
 }

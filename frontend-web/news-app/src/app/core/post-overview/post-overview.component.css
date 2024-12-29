@@ -19,35 +19,5 @@ span {
   text-align: center;
   background-color: white;
   border-radius: 10px;
-  height: 200px
-}
-
-.post-card {
-  background-color: white;
-  border-radius: 10px;
-  height: 200px;
-  position: relative;
-}
-
-.post-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.post-content {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 4;
-}
-
-mat-card-footer {
-  padding: 16px;
-}
-
-.post-author {
-  font-style: italic;
-  position: absolute;
-  bottom: 0;
+  height: 250px
 }

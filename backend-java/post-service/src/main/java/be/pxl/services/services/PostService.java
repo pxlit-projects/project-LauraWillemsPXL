@@ -23,6 +23,7 @@ public class PostService implements IPostService {
         Post post = Post.builder()
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
+                .tags(postRequest.getTags())
                 .author(postRequest.getAuthor())
                 .publishedDate(new Date())
                 .isDraft(postRequest.isDraft())
@@ -34,6 +35,7 @@ public class PostService implements IPostService {
                 .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
+                .tags(post.getTags())
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
                 .isDraft(post.isDraft())
@@ -51,8 +53,10 @@ public class PostService implements IPostService {
                     .id(post.getId())
                     .title(post.getTitle())
                     .content(post.getContent())
+                    .tags(post.getTags())
                     .author(post.getAuthor())
                     .publishedDate(post.getPublishedDate())
+                    .isDraft(post.isDraft())
                     .build())
                     .toList();
         }
@@ -62,8 +66,10 @@ public class PostService implements IPostService {
                 .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
+                .tags(post.getTags())
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
+                .isDraft(post.isDraft())
                 .build())
                 .toList();
     }
@@ -80,8 +86,10 @@ public class PostService implements IPostService {
                 .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
+                .tags(post.getTags())
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
+                .isDraft(post.isDraft())
                 .build();
     }
 
@@ -96,8 +104,10 @@ public class PostService implements IPostService {
                             .id(post.getId())
                             .title(post.getTitle())
                             .content(post.getContent())
+                            .tags(post.getTags())
                             .author(post.getAuthor())
                             .publishedDate(post.getPublishedDate())
+                            .isDraft(post.isDraft())
                             .build())
                     .toList();
         }
@@ -121,6 +131,7 @@ public class PostService implements IPostService {
 
         post.setTitle(postRequest.getTitle());
         post.setContent(postRequest.getContent());
+        post.setTags(postRequest.getTags());
         post.setAuthor(postRequest.getAuthor());
         post.setPublishedDate(new Date());
         post.setDraft(postRequest.isDraft());
@@ -131,6 +142,7 @@ public class PostService implements IPostService {
                  .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
+                .tags(post.getTags())
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
                 .isDraft(post.isDraft())

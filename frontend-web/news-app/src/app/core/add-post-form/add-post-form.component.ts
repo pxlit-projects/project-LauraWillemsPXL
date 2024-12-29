@@ -24,21 +24,41 @@ export class AddPostFormComponent {
   postService: PostService = inject(PostService);
   authService: AuthService = inject(AuthService);
   router: Router = inject(Router);
+  tags: string[] = [];
 
   postForm: FormGroup = this.fb.group({
     title: ['', Validators.required],
     content: ['', Validators.required],
+    tags: ['', Validators.required],
     isDraft: [false],
   });
+
+  addTag(event: KeyboardEvent): void {
+    const input = event.target as HTMLInputElement;
+    const value = input.value.trim();
+
+    if ((event.key === ' ') && value) {
+      if (!this.tags.includes(value)) {
+        this.tags.push(value);
+        this.postForm.get('tags')?.setValue(this.tags.join(','));
+        input.value = '';
+      }
+    }
+  }
+
+  removeTag(tag: string): void {
+    this.tags = this.tags.filter((t) => t !== tag);
+    this.postForm.get('tags')?.setValue(this.tags.join(','));
+  }
 
   onSubmit(): void {
     let title = this.postForm.get('title')?.value;
     let content = this.postForm.get('content')?.value;
     let isDraft = this.postForm.get('isDraft')?.value;
 
-    console.log('is draft: ', isDraft);
+    console.log(isDraft);
 
-    this.postService.addPost(new PostRequest(title, content, this.authService.getUserName(), isDraft)).subscribe({
+    this.postService.addPost(new PostRequest(title, content, this.tags, this.authService.getUserName(), isDraft)).subscribe({
       next: () => {
         this.router.navigate(['/posts']);
       },
