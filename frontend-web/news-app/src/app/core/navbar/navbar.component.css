@@ -26,12 +26,6 @@ li:hover {
 }
 
 .logout {
-  cursor: pointer;
-  font-weight: bold;
   padding: 5px;
   margin-left: auto;
-  background-color: red;
-  color: white;
-  border: 1px solid red;
-  border-radius: 10px;
 }

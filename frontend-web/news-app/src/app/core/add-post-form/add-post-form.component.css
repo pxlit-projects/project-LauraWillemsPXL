@@ -88,3 +88,8 @@ li {
   font-size: medium;
   font-family: "Montserrat", sans-serif;
 }
+
+.publish-button {
+  margin: 5px auto;
+  width: 300px;
+}

@@ -1,14 +1,46 @@
 <div class="container">
- <nav>
-   <app-navbar></app-navbar>
- </nav>
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+
+  @if (role == "user") {
+    <div class="filter-container">
+      <div class="filter-inputs">
+        <div class="filter-field">
+          <label for="author-filter">Author</label>
+          <input type="text" id="author-filter" class="filter-input" placeholder="Search by author name" [(ngModel)]="authorName">
+        </div>
+
+        <div class="filter-field">
+          <label for="tags-filter">Tag</label>
+          <select name="tags" id="tags-filter" class="filter-input" [(ngModel)]="tag">
+            @for (tag of tags; track tag) {
+              <option value="{{ tag }}">{{ tag }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="filter-field">
+          <label for="date-filter">Published date</label>
+          <input type="date" id="date-filter" class="filter-input" [(ngModel)]="publishedDate">
+        </div>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="button-blue filter-button" (click)="filterPosts()">Filter</button>
+        <button class="button-red filter-button" (click)="clearFilters()">Clear filters</button>
+      </div>
+    </div>
+  }
+
   <div class="posts-container">
     @if (role == "editor") {
       <mat-card appearance="outlined" class="add-post-card" (click)="onAddPostClick()">
         <span>ADD POST</span>
       </mat-card>
     }
-    @for (post of posts; track post.id) {
+
+    @for (post of filteredPosts; track post.id) {
       <app-post-card [id]="post.id"
                      [title]="post.title"
                      [content]="post.content"
