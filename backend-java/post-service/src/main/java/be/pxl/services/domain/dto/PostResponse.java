@@ -1,5 +1,6 @@
 package be.pxl.services.domain.dto;
 
+import be.pxl.services.domain.PostStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,4 +22,7 @@ public class PostResponse {
     private Date publishedDate;
     @JsonProperty("draft")
     private boolean isDraft;
+    private PostStatus status;
+    private String rejectionComment;
+    private List<String> reviewNotifications;
 }

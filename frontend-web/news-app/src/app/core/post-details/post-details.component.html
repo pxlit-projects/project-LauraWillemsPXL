@@ -1,0 +1,36 @@
+<div class="container">
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+  @if (post) {
+    <div class="post-details-container">
+      <h1>{{post.title}}</h1>
+      <p>{{post.content}}</p>
+      <p class=author-date>{{post.author}} ~ {{post.publishedDate | date: 'dd/MM/yyyy'}}</p>
+    </div>
+    @if (role == "editor-in-chief") {
+      <div class="review-container">
+        <div class="input-container">
+          <input type="radio" id="approve" name="review" value="approve" [(ngModel)]="review">
+          <label for="approve">Approve</label>
+        </div>
+        <div class="input-container">
+          <input type="radio" id="reject" name="review" value="reject" [(ngModel)]="review">
+          <label for="reject">Reject</label>
+        </div>
+      </div>
+
+      @if (review === "reject") {
+        <div class="reject-reason-container">
+          <label for="reject-reason" class="reject-reason-label">Reason for rejection:</label>
+          <textarea id="reject-reason" name="reject-reason" class="textarea" [(ngModel)]="rejectionComment"></textarea>
+        </div>
+      }
+
+      <div class="button-container">
+        <button class="button-blue review-button" type="button" (click)="uploadReview()">Upload Review</button>
+      </div>
+    }
+  }
+
+</div>

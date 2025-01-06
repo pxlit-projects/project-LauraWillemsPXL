@@ -4,6 +4,10 @@
   <nav>
     <app-navbar></app-navbar>
   </nav>
+  <div class="rejection-instructions">
+    <h3>Post Rejected</h3>
+    <p>{{post.rejectionComment}}</p>
+  </div>
   <div class="form-container">
     <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
       <label for="title">Title</label>
@@ -14,14 +18,13 @@
       <div class="tags">
         <p>Place a space after each tag</p>
         <ul>
-          @for (tag of draft.tags; track draft.tags.indexOf(tag)) {
+          @for (tag of post.tags; track post.tags.indexOf(tag)) {
             <li>{{ tag }} <span class="material-symbols-outlined" (click)="removeTag(tag)">close</span></li>
           }
           <input type="text" (keydown)="addTag($event)">
         </ul>
       </div>
       <div class="buttons">
-        <button type="button" class="button-blue" (click)="updateDraft()">SAVE DRAFT</button>
         <button type="submit" class="button-blue" [disabled]="!postForm.valid">PUBLISH POST</button>
       </div>
     </form>

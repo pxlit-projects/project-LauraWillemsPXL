@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import {NavbarComponent} from "../navbar/navbar.component";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
@@ -17,7 +17,7 @@ import {AuthService} from "../../shared/services/auth.service";
   templateUrl: './draft-details.component.html',
   styleUrl: './draft-details.component.css'
 })
-export class DraftDetailsComponent implements OnInit{
+export class DraftDetailsComponent implements OnInit {
   draftId!: number;
   draft!: Post;
   postService: PostService = inject(PostService);
@@ -68,7 +68,7 @@ export class DraftDetailsComponent implements OnInit{
     let content = this.postForm.get('content')?.value;
     let tags = this.postForm.get('tags')?.value;
 
-    this.postService.updateDraft(this.draftId, new PostRequest(title, content, tags, this.authService.getUserName(), true)).subscribe(response => {
+    this.postService.updatePost(this.draftId, new PostRequest(title, content, tags, this.authService.getUserName(), true)).subscribe(response => {
       this.router.navigate(['/drafts']);
     });
   }

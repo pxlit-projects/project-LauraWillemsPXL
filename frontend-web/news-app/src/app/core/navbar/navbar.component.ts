@@ -28,6 +28,10 @@ export class NavbarComponent implements OnInit{
   }
 
   onDraftsClick(): void {
-    this.router.navigate(['/posts/drafts']);
+    this.router.navigate(['/drafts']);
+  }
+
+  onNotificationsClick(): void {
+    this.router.navigate(['/notifications']);
   }
 }

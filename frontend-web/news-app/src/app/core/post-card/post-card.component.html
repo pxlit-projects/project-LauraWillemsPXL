@@ -1,8 +1,24 @@
 <mat-card appearance="outlined" class="card">
   <mat-card-header>
     <mat-card-title class="title">{{title}}</mat-card-title>
+    @if (userRole == "editor") {
+      <div class="status-container" [ngClass]="{
+        'status-approved': status === 'APPROVED',
+        'status-rejected': status === 'REJECTED',
+        'status-pending': status === 'PENDING'
+      }">
+        <p>{{status}}</p>
+
+        @if (status === 'REJECTED') {
+          <div class="edit-button" (click)="onRejectedPostEditClick()">
+            <img src="edit.svg" class="edit-rejected-img">
+          </div>
+        }
+      </div>
+    }
+
     @if (isDraft) {
-      <div class="edit-button" (click)="onEditClick()">
+      <div class="edit-button-draft" (click)="onEditClick()">
         <img src="edit.svg">
       </div>
     }

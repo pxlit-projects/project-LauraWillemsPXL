@@ -56,8 +56,6 @@ export class AddPostFormComponent {
     let content = this.postForm.get('content')?.value;
     let isDraft = this.postForm.get('isDraft')?.value;
 
-    console.log(isDraft);
-
     this.postService.addPost(new PostRequest(title, content, this.tags, this.authService.getUserName(), isDraft)).subscribe({
       next: () => {
         this.router.navigate(['/posts']);

@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-color: lightsteelblue;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .button-blue {
@@ -64,4 +64,11 @@ body {
   box-sizing: border-box;
   background-color: white;
   font-size: medium;
+}
+
+.textarea {
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 4px;
 }

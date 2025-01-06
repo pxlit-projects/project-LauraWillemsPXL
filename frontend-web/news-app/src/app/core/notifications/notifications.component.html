@@ -1,0 +1,10 @@
+<div class="container">
+  <nav>
+    <app-navbar></app-navbar>
+  </nav>
+  <div class="notification-container">
+    @for (notification of notifications; track notification) {
+      <p>{{notification}}</p>
+    }
+  </div>
+</div>

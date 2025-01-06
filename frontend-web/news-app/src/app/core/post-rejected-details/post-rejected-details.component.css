@@ -9,13 +9,23 @@ nav {
 }
 
 .form-container {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 }
 
-form {
+.rejection-instructions {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.rejection-instructions p {
+  color: #d32f2f;
+  margin-top: 5px;
+}
+
+form, .rejection-instructions {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -35,13 +45,13 @@ textarea {
   height: 250px;
 }
 
-.is-draft-checkbox {
+.buttons {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
-.is-draft-label {
-  margin-left: 5px;
+button {
+  width: 150px;
 }
 
 li {
@@ -83,9 +93,4 @@ li {
   padding: 5px;
   font-size: medium;
   font-family: "Montserrat", sans-serif;
-}
-
-.publish-button {
-  margin: 5px auto;
-  width: 300px;
 }

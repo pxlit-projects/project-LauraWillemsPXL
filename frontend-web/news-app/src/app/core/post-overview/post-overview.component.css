@@ -22,6 +22,10 @@ span {
   height: 250px
 }
 
+.post-card {
+  cursor: pointer;
+}
+
 .filter-container {
   display: flex;
   flex-direction: column;

@@ -2,10 +2,10 @@ package be.pxl.services.controller;
 
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
-import be.pxl.services.services.interfaces.IPostService;
+import be.pxl.services.domain.dto.ReviewRequest;
+import be.pxl.services.services.IPostService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,13 +40,13 @@ public class PostController {
         return new ResponseEntity<>(postService.getAllDrafts(userRole, userName), HttpStatus.OK);
     }
 
-    @PutMapping("/draft/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<PostResponse> updateDraft(@PathVariable Long id,
                                                     @RequestBody @Valid PostRequest postRequest,
                                                     @RequestHeader(value = "User-Role") String userRole,
                                                     @RequestHeader(value = "User-Name") String userName) {
 
-        return new ResponseEntity<>(postService.updateDraft(id, postRequest, userRole, userName), HttpStatus.OK);
+        return new ResponseEntity<>(postService.updatePost(id, postRequest, userRole, userName), HttpStatus.OK);
     }
 
     @DeleteMapping("/draft/{id}")
@@ -56,5 +56,17 @@ public class PostController {
 
         postService.deleteDraft(id, userRole, userName);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}/review")
+    @ResponseStatus(HttpStatus.OK)
+    public void reviewPost(@PathVariable Long id, @RequestBody ReviewRequest reviewRequest) {
+        postService.reviewPost(id, reviewRequest);
+    }
+
+    @GetMapping("/notifications")
+    public ResponseEntity<List<String>> getNotificationsOfAuthor(@RequestHeader(value = "User-Role") String userRole,
+                                                                 @RequestHeader(value = "User-Name") String userName) {
+        return new ResponseEntity<>(postService.getNotificationsOfAuthor(userRole, userName), HttpStatus.OK);
     }
 }

@@ -15,7 +15,6 @@ export class PostService {
 
   addPost(postRequest: PostRequest) {
     const headers = this.authService.getHeaders();
-    console.log(postRequest);
     return this.http.post<Post>(`${environment.api}/post/api/post`, postRequest, { headers });
   }
 
@@ -33,13 +32,18 @@ export class PostService {
     return this.http.get<Post[]>(`${environment.api}/post/api/post/drafts`, { headers });
   }
 
-  updateDraft(id: number, postRequest: PostRequest) {
+  updatePost(id: number, postRequest: PostRequest) {
     const headers = this.authService.getHeaders();
-    return this.http.put<Post>(`${environment.api}/post/api/post/draft/${id}`, postRequest, { headers });
+    return this.http.put<Post>(`${environment.api}/post/api/post/update/${id}`, postRequest, { headers });
   }
 
   deleteDraft(id: number) {
     const headers = this.authService.getHeaders();
-    return this.http.delete<Post>(`${environment.api}/post/api/post/draft/${id}`, { headers });
+    return this.http.delete<void>(`${environment.api}/post/api/post/draft/${id}`, { headers });
+  }
+
+  getNotificationsOfAuthor() {
+    const headers = this.authService.getHeaders();
+    return this.http.get<string[]>(`${environment.api}/post/api/post/notifications`, { headers });
   }
 }

@@ -1,0 +1,13 @@
+.notification-container {
+  margin: 0 auto;
+  width: 75%;
+}
+
+p {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}

@@ -5,7 +5,7 @@ import {Router} from "@angular/router";
 import {PostService} from "../../shared/services/post.service";
 import {Post} from "../../shared/model/post.model";
 import {MatChipsModule} from "@angular/material/chips";
-import {DatePipe} from "@angular/common";
+import {DatePipe, NgIf} from "@angular/common";
 import {PostCardComponent} from "../post-card/post-card.component";
 import {AuthService} from "../../shared/services/auth.service";
 import {FormsModule} from "@angular/forms";
@@ -19,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     MatChipsModule,
     DatePipe,
     PostCardComponent,
-    FormsModule
+    FormsModule,
+    NgIf
   ],
   templateUrl: './post-overview.component.html',
   styleUrl: './post-overview.component.css'
@@ -82,5 +83,9 @@ export class PostOverviewComponent implements OnInit{
 
   onAddPostClick(): void {
     this.router.navigate(['/posts/addPost']);
+  }
+
+  onPostClick(id: number): void {
+    this.router.navigate([`/posts/${id}/details`]);
   }
 }

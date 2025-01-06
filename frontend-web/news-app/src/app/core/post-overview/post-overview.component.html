@@ -41,13 +41,16 @@
     }
 
     @for (post of filteredPosts; track post.id) {
-      <app-post-card [id]="post.id"
+      <app-post-card class="post-card"
+                     [id]="post.id"
                      [title]="post.title"
                      [content]="post.content"
                      [tags]="post.tags"
                      [author]="post.author"
                      [publishedDate]="post.publishedDate"
                      [isDraft]="post.draft"
+                     [status]="post.status"
+                     (click)="onPostClick(post.id)"
       ></app-post-card>
     }
   </div>

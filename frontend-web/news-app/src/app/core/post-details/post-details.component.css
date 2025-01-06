@@ -1,0 +1,52 @@
+.post-details-container {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.author-date {
+  font-size: smaller;
+  font-style: italic;
+  text-align: center;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin: 0 5px;
+}
+
+.input-container {
+  margin: 0 20px;
+}
+
+.reject-reason-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.reject-reason-label {
+  margin: 10px 0;
+}
+
+textarea {
+  height: 200px;
+}
+
+.review-button {
+  width: 200px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}

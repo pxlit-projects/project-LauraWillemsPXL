@@ -4,9 +4,15 @@
     <ul>
       <li (click)="onPostsClick()">Posts</li>
       <li (click)="onDraftsClick()">Drafts</li>
+      <li (click)="onNotificationsClick()">Notifications</li>
     </ul>
   }
   @if (userRole === "user") {
+    <ul>
+      <li (click)="onPostsClick()">Posts</li>
+    </ul>
+  }
+  @if (userRole === "editor-in-chief") {
     <ul>
       <li (click)="onPostsClick()">Posts</li>
     </ul>
