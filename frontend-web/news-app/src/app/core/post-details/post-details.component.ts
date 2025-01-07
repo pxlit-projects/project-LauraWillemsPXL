@@ -8,6 +8,7 @@ import {AuthService} from "../../shared/services/auth.service";
 import {FormsModule} from "@angular/forms";
 import {ReviewService} from "../../shared/services/review.service";
 import {RejectPostRequest} from "../../shared/model/rejectPostRequest.model";
+import {PostCommentsComponent} from "../post-comments/post-comments.component";
 
 @Component({
   selector: 'app-post-details',
@@ -15,7 +16,8 @@ import {RejectPostRequest} from "../../shared/model/rejectPostRequest.model";
   imports: [
     NavbarComponent,
     DatePipe,
-    FormsModule
+    FormsModule,
+    PostCommentsComponent
   ],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.css'
