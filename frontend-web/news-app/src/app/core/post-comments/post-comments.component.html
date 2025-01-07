@@ -2,24 +2,40 @@
   <form>
     <h3>{{comments.length}} Comments</h3>
     <textarea id="comment" name="comment" class="textarea" [(ngModel)]="comment" required placeholder="Place your comment here"></textarea>
-    <button type="submit" (click)="onSubmit()" class="button-blue" [disabled]="comment === ''">Add Comment</button>
+    <button type="submit" (click)="onSubmit()" class="submit-button button-blue" [disabled]="comment === ''">Add Comment</button>
   </form>
 
   @if (comments.length > 0) {
     <div class="comments-list">
-      @for (comment of comments.reverse(); track comment.id) {
+      @for (comment of comments; track comment.id) {
         <div class="comment">
           <div class="comment-header">
             <p><strong>{{comment.createdBy}}</strong></p>
             <p class="comment-date">{{comment.createdAt | date: 'dd/MM/yyyy'}}</p>
           </div>
           <div class="comment-content">
-            <p>{{comment.comment}}</p>
+            @if (comment.id === editCommentId) {
+              <form>
+                <textarea id="editComment" name="editComment" class="textarea update-textarea" [(ngModel)]="editedComment" required></textarea>
+                <div class="buttons">
+                  <button type="submit" (click)="onUpdateComment()" class="button-blue comment-button" [disabled]="editedComment === ''">Update Comment</button>
+                  <button type="button" (click)="cancelUpdateComment()" class="button-red comment-button">Cancel</button>
+                </div>
+              </form>
+            }
+            @else {
+              <p>{{comment.comment}}</p>
+            }
           </div>
+
+          @if (comment.createdBy === userName && comment.id !== editCommentId) {
+            <div class="buttons">
+              <button type="button" class="button-blue comment-button" (click)="onEdit(comment.id, comment.comment)">Edit</button>
+              <button type="button" class="button-red comment-button" (click)="onDelete(comment.id)">Delete</button>
+            </div>
+          }
         </div>
       }
     </div>
   }
-
-  <div></div>
 </div>
