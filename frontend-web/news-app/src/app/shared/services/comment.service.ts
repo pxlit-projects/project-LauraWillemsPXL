@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {AuthService} from "./auth.service";
 import {CommentRequest} from "../model/CommentRequest.model";
 import {Comment} from "../model/comment.model";
-import {environment} from "../../../environment/environment.development";
+import {environment} from "../../../environments/environment.development";
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Post} from "../model/post.model";
-import {environment} from "../../../environment/environment.development";
+import {environment} from "../../../environments/environment.development";
 import {PostRequest} from "../model/postRequest.model";
 import {AuthService} from "./auth.service";
 

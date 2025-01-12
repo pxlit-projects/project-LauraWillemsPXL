@@ -1,7 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "./auth.service";
-import {environment} from "../../../environment/environment.development";
+import {environment} from "../../../environments/environment.development";
 import {RejectPostRequest} from "../model/rejectPostRequest.model";
 
 @Injectable({
