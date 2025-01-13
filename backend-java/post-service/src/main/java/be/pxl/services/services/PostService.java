@@ -10,6 +10,8 @@ import be.pxl.services.exceptions.ResourceNotFoundException;
 import be.pxl.services.repository.IPostRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PostService implements IPostService {
     private final IPostRepository postRepository;
+    private static final Logger logger = LoggerFactory.getLogger(PostService.class);
 
     @Override
     public PostResponse addPost(PostRequest postRequest) {
@@ -34,6 +37,8 @@ public class PostService implements IPostService {
                 .build();
 
         postRepository.save(post);
+
+        logger.debug("Adding a new post with details: {}", postRequest);
 
         return PostResponse.builder()
                 .id(post.getId())
@@ -54,6 +59,8 @@ public class PostService implements IPostService {
                     .filter(post -> post.getAuthor().equals(userName) && !post.isDraft())
                     .toList();
 
+            logger.debug("Getting all posts of editor: {}", userName);
+
             return posts.stream().map(post -> PostResponse.builder()
                     .id(post.getId())
                     .title(post.getTitle())
@@ -73,6 +80,8 @@ public class PostService implements IPostService {
                     .filter(post -> post.getStatus().equals(PostStatus.PENDING) && !post.isDraft())
                     .toList();
 
+            logger.debug("Getting all posts for the editor-in-chief");
+
             return posts.stream().map(post -> PostResponse.builder()
                     .id(post.getId())
                     .title(post.getTitle())
@@ -89,6 +98,8 @@ public class PostService implements IPostService {
                 .stream()
                 .filter(post -> !post.isDraft() && post.getStatus().equals(PostStatus.APPROVED))
                 .toList();
+
+        logger.debug("Getting all posts for user: {}", userName);
 
         return posts.stream().map(post -> PostResponse.builder()
                 .id(post.getId())
@@ -107,8 +118,11 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(id).orElse(null);
 
         if (post == null) {
+            logger.debug("Post with id {} not found", id);
             throw new ResourceNotFoundException("Post not found");
         }
+
+        logger.debug("Retrieving post with id {}", id);
 
         return PostResponse.builder()
                 .id(post.getId())
@@ -119,7 +133,6 @@ public class PostService implements IPostService {
                 .publishedDate(post.getPublishedDate())
                 .isDraft(post.isDraft())
                 .status(post.getStatus())
-                .rejectionComment(post.getRejectionComment())
                 .build();
     }
 
@@ -129,6 +142,8 @@ public class PostService implements IPostService {
             List<Post> posts = postRepository.findAll().stream()
                     .filter(post -> post.getAuthor().equals(userName) && post.isDraft())
                     .toList();
+
+            logger.debug("Getting all drafts of editor: {}", userName);
 
             return posts.stream().map(post -> PostResponse.builder()
                             .id(post.getId())
@@ -143,6 +158,7 @@ public class PostService implements IPostService {
         }
         else
         {
+            logger.debug("Permission denied. User ({}) with role '{}' is not allowed to view drafts", userName, userRole);
             throw new PermissionDeniedException("You are not allowed to view drafts");
         }
     }
@@ -152,10 +168,12 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(id).orElse(null);
 
         if (post == null) {
+            logger.debug("Post with id {} not found", id);
             throw new ResourceNotFoundException("Post not found");
         }
 
         if (!post.getAuthor().equals(userName) && !userRole.equals("editor")) {
+            logger.debug("Permission denied. User ({}) with role '{}' is not allowed to update post with id {}", userName, userRole, id);
             throw new PermissionDeniedException("You are not allowed to update this post");
         }
 
@@ -169,6 +187,8 @@ public class PostService implements IPostService {
         if (!post.isDraft()) {
             post.setStatus(PostStatus.PENDING);
         }
+
+        logger.debug("Updating post with id {} to: {}", id, postRequest);
 
         postRepository.save(post);
 
@@ -188,13 +208,16 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(id).orElse(null);
 
         if (post == null) {
+            logger.debug("Post with id {} not found", id);
             throw new ResourceNotFoundException("Post not found");
         }
 
         if (!post.getAuthor().equals(userName) && !userRole.equals("editor")) {
+            logger.debug("Permission denied. User ({}) with role '{}' is not allowed to delete post with id {}", userName, userRole, id);
             throw new PermissionDeniedException("You are not allowed to delete this post");
         }
 
+        logger.debug("Deleting draft with id {}", id);
         postRepository.delete(post);
     }
 
@@ -203,17 +226,20 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(id).orElse(null);
 
         if (post == null) {
+            logger.debug("Post with id {} not found", id);
             throw new ResourceNotFoundException("Post not found");
         }
 
         if (reviewRequest.getReview().equalsIgnoreCase("approved")) {
+            logger.debug("Post with id {} is approved", id);
             post.setStatus(PostStatus.APPROVED);
         }
         else if (reviewRequest.getReview().equalsIgnoreCase("rejected")) {
+            logger.debug("Post with id {} is rejected", id);
             post.setStatus(PostStatus.REJECTED);
-            post.setRejectionComment(reviewRequest.getRejectionComment());
         }
         else {
+            logger.debug("Invalid review status");
             throw new IllegalArgumentException("Invalid review status");
         }
 
@@ -227,7 +253,6 @@ public class PostService implements IPostService {
                 .author(post.getAuthor())
                 .publishedDate(post.getPublishedDate())
                 .status(post.getStatus())
-                .rejectionComment(post.getRejectionComment())
                 .isDraft(post.isDraft())
                 .build();
     }
@@ -235,6 +260,7 @@ public class PostService implements IPostService {
     @Override
     public List<String> getNotificationsOfAuthor(String userRole, String userName) {
         if (!userRole.equals("editor")) {
+            logger.debug("Permission denied. User ({}) with role '{}' is not allowed to view notifications", userName, userRole);
             throw new PermissionDeniedException("You are not allowed to view notifications");
         }
 
@@ -244,9 +270,11 @@ public class PostService implements IPostService {
                 .toList();
 
         if (posts.isEmpty()) {
+            logger.debug("No posts found");
             throw new ResourceNotFoundException("No posts found");
         }
 
+        logger.debug("Getting notifications of author: {}", userName);
         return posts.stream()
                 .flatMap(post -> post.getReviewNotifications().stream())
                 .toList();
@@ -254,17 +282,18 @@ public class PostService implements IPostService {
 
     @RabbitListener(queues = "notificationQueue")
     public void listen(String message) {
-        System.out.println("Message read from myQueue: " + message);
+        logger.debug("Message read from notificationQueue: {}", message);
         String[] messageParts = message.split(" ");
         Long postId = Long.parseLong(messageParts[3]);
 
         Post post = postRepository.findById(postId).orElse(null);
 
         if (post == null) {
+            logger.debug("Post with id {} not found", postId);
             throw new ResourceNotFoundException("Post not found");
         }
 
-        System.out.println("Post: " + postId);
+        logger.debug("Adding notification '{}' to post with id {}", message, postId);
         post.getReviewNotifications().add(message);
         postRepository.save(post);
     }

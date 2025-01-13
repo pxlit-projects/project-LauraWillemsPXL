@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReviewRequest {
-    private String review;
+public class RejectionReviewResponse {
+    private String rejectionComment;
 }

@@ -9,8 +9,9 @@ import be.pxl.services.exceptions.PermissionDeniedException;
 import be.pxl.services.exceptions.ResourceNotFoundException;
 import be.pxl.services.repository.ICommentRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
 
@@ -19,12 +20,14 @@ import java.util.List;
 public class CommentService implements ICommentService {
     private final ICommentRepository commentRepository;
     private final PostClient postClient;
+    private final Logger logger = LoggerFactory.getLogger(CommentService.class);
 
     @Override
     public CommentResponse addComment(CommentRequest commentRequest) {
         PostResponse postResponse = postClient.getPostById(commentRequest.getPostId());
 
         if (postResponse == null) {
+            logger.debug("The post for the created comment does not exist");
             throw new ResourceNotFoundException("The post for the created comment does not exist");
         }
 
@@ -34,6 +37,8 @@ public class CommentService implements ICommentService {
                 .createdBy(commentRequest.getCreatedBy())
                 .createdAt(new Date())
                 .build();
+
+        logger.debug("Adding a new comment with details: {}", comment);
 
         commentRepository.save(comment);
 
@@ -50,6 +55,8 @@ public class CommentService implements ICommentService {
     public List<CommentResponse> getAllComments() {
         List<Comment> comments = commentRepository.findAll();
 
+        logger.debug("Retrieving all comments");
+
         return comments.stream().map(comment -> CommentResponse.builder()
                 .id(comment.getId())
                 .postId(comment.getPostId())
@@ -65,16 +72,20 @@ public class CommentService implements ICommentService {
         Comment comment = commentRepository.findById(id).orElse(null);
 
         if (comment == null) {
+            logger.debug("Comment with id {} not found", id);
             throw new ResourceNotFoundException("Comment not found");
         }
 
         if (!comment.getCreatedBy().equals(userName) && !userRole.equals("user")) {
+            logger.debug("User {} is not allowed to update this comment", userName);
             throw new PermissionDeniedException("You are not allowed to update this comment");
         }
 
         comment.setComment(commentRequest.getComment());
 
         commentRepository.save(comment);
+
+        logger.debug("Updating comment with id {} to: {}", id, commentRequest);
 
         return CommentResponse.builder()
                 .id(comment.getId())
@@ -90,13 +101,16 @@ public class CommentService implements ICommentService {
         Comment comment = commentRepository.findById(id).orElse(null);
 
         if (comment == null) {
+            logger.debug("Comment with id {} not found", id);
             throw new ResourceNotFoundException("Comment not found");
         }
 
         if (!comment.getCreatedBy().equals(userName) && !userRole.equals("user")) {
+            logger.debug("User {} is not allowed to delete this comment", userName);
             throw new PermissionDeniedException("You are not allowed to update this comment");
         }
 
+        logger.debug("Deleting comment with id {}", id);
         commentRepository.delete(comment);
     }
 }

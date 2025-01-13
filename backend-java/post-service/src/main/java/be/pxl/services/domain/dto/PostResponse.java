@@ -23,6 +23,5 @@ public class PostResponse {
     @JsonProperty("draft")
     private boolean isDraft;
     private PostStatus status;
-    private String rejectionComment;
     private List<String> reviewNotifications;
 }

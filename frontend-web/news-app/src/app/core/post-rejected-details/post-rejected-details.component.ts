@@ -6,6 +6,8 @@ import {PostService} from "../../shared/services/post.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostRequest} from "../../shared/model/postRequest.model";
 import {AuthService} from "../../shared/services/auth.service";
+import {ReviewService} from "../../shared/services/review.service";
+import {RejectionReview} from "../../shared/model/rejectionReview.model";
 
 @Component({
   selector: 'app-post-rejected-details',
@@ -21,7 +23,9 @@ import {AuthService} from "../../shared/services/auth.service";
 export class PostRejectedDetailsComponent implements OnInit{
   postId!: number;
   post!: Post;
+  rejectionReview!: RejectionReview;
   postService: PostService = inject(PostService);
+  reviewService: ReviewService = inject(ReviewService);
   authService: AuthService = inject(AuthService);
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   router: Router = inject(Router);
@@ -31,11 +35,14 @@ export class PostRejectedDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     this.postId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.reviewService.getRejectionCommentOfPost(this.postId).subscribe(response => {
+      this.rejectionReview = response;
+    });
     this.postService.getPostById(this.postId).subscribe(response => {
       this.post = response;
       this.tags = this.post.tags;
       this.initializeForm();
-    })
+    });
   }
 
   initializeForm(): void {
@@ -43,7 +50,7 @@ export class PostRejectedDetailsComponent implements OnInit{
       title: [this.post.title, Validators.required],
       content: [this.post.content, Validators.required],
       tags: [this.post.tags, Validators.required],
-    })
+    });
   }
 
   addTag(event: KeyboardEvent): void {

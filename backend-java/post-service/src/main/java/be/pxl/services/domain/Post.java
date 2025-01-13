@@ -39,9 +39,6 @@ public class Post {
     @Enumerated(EnumType.STRING)
     private PostStatus status;
 
-    @Lob
-    private String rejectionComment;
-
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> reviewNotifications;
 }

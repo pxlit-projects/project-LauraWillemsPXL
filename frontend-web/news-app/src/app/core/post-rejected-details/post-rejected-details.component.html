@@ -6,27 +6,29 @@
   </nav>
   <div class="rejection-instructions">
     <h3>Post Rejected</h3>
-    <p>{{post.rejectionComment}}</p>
+    <p>{{rejectionReview.rejectionComment}}</p>
   </div>
-  <div class="form-container">
-    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-      <label for="title">Title</label>
-      <input class="input" type="text" id="title" formControlName="title">
-      <label for="content">Content</label>
-      <textarea id="content" formControlName="content" class="textarea"></textarea>
-      <label>Tags</label>
-      <div class="tags">
-        <p>Place a space after each tag</p>
-        <ul>
-          @for (tag of post.tags; track post.tags.indexOf(tag)) {
-            <li>{{ tag }} <span class="material-symbols-outlined" (click)="removeTag(tag)">close</span></li>
-          }
-          <input type="text" (keydown)="addTag($event)">
-        </ul>
-      </div>
-      <div class="buttons">
-        <button type="submit" class="button-blue" [disabled]="!postForm.valid">PUBLISH POST</button>
-      </div>
-    </form>
-  </div>
+  @if(postForm) {
+    <div class="form-container">
+      <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <label for="title">Title</label>
+        <input class="input" type="text" id="title" formControlName="title">
+        <label for="content">Content</label>
+        <textarea id="content" formControlName="content" class="textarea"></textarea>
+        <label>Tags</label>
+        <div class="tags">
+          <p>Place a space after each tag</p>
+          <ul>
+            @for (tag of post.tags; track post.tags.indexOf(tag)) {
+              <li>{{ tag }} <span class="material-symbols-outlined" (click)="removeTag(tag)">close</span></li>
+            }
+            <input type="text" (keydown)="addTag($event)">
+          </ul>
+        </div>
+        <div class="buttons">
+          <button type="submit" class="button-blue" [disabled]="!postForm.valid">PUBLISH POST</button>
+        </div>
+      </form>
+    </div>
+  }
 </div>

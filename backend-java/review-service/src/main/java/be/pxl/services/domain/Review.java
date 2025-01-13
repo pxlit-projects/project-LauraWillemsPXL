@@ -11,5 +11,4 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Review {
     private String review;
-    private String rejectionComment;
 }

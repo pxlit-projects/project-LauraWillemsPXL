@@ -7,7 +7,6 @@ export class Post {
   publishedDate: Date;
   draft: boolean;
   status: string;
-  rejectionComment?: string;
 
   constructor(id: number, title: string, content: string, tags: string[], author: string, publishedDate: Date, draft: boolean, status: string, rejectionComment?: string) {
     this.id = id;
@@ -18,6 +17,5 @@ export class Post {
     this.publishedDate = publishedDate;
     this.draft = draft;
     this.status = status;
-    this.rejectionComment = rejectionComment;
   }
 }

@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RejectPostRequest {
+public class RejectionReviewRequest {
     private String rejectionComment;
 }

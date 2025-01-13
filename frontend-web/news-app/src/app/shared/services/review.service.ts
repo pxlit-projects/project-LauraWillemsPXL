@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {AuthService} from "./auth.service";
 import {environment} from "../../../environments/environment.development";
 import {RejectPostRequest} from "../model/rejectPostRequest.model";
+import {RejectionReview} from "../model/rejectionReview.model";
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,10 @@ export class ReviewService {
   rejectPost(postId: number, rejectPostRequest: RejectPostRequest) {
     const headers = this.authService.getHeaders();
     return this.httpClient.post<void>(`${environment.api}/review/api/review/reject/${postId}`, rejectPostRequest, { headers });
+  }
+
+  getRejectionCommentOfPost(postId: number) {
+    const headers = this.authService.getHeaders();
+    return this.httpClient.get<RejectionReview>(`${environment.api}/review/api/review/${postId}`, { headers });
   }
 }
