@@ -8,7 +8,6 @@ import be.pxl.services.domain.dto.ReviewRequest;
 import be.pxl.services.exceptions.PermissionDeniedException;
 import be.pxl.services.exceptions.ResourceNotFoundException;
 import be.pxl.services.repository.IPostRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

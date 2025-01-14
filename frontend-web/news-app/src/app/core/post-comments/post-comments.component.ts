@@ -4,7 +4,7 @@ import {Comment} from "../../shared/model/comment.model";
 import {MatCardModule} from "@angular/material/card";
 import {DatePipe} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import {CommentRequest} from "../../shared/model/CommentRequest.model";
+import {CommentRequest} from "../../shared/model/commentRequest.model";
 import {AuthService} from "../../shared/services/auth.service";
 
 @Component({

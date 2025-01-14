@@ -1,23 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import {DraftOverviewComponent} from "./draft-overview.component";
+import {PostService} from "../../shared/services/post.service";
 
-import { DraftOverviewComponent } from './draft-overview.component';
-
-describe('DraftOverviewComponent', () => {
+describe("DraftOverviewComponent", () => {
   let component: DraftOverviewComponent;
   let fixture: ComponentFixture<DraftOverviewComponent>;
+  let postServiceMock: jasmine.SpyObj<PostService>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [DraftOverviewComponent]
-    })
-    .compileComponents();
+
+  beforeEach(() => {
+    postServiceMock = jasmine.createSpyObj("PostService", ["getAllDrafts"]);
+
+    TestBed.configureTestingModule({
+      imports: [DraftOverviewComponent],
+      providers: [
+        { provide: PostService, useValue: postServiceMock },
+      ]
+    });
 
     fixture = TestBed.createComponent(DraftOverviewComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create the component", () => {
     expect(component).toBeTruthy();
   });
 });

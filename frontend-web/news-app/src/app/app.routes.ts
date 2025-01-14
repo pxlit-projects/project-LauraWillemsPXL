@@ -7,6 +7,7 @@ import {DraftDetailsComponent} from "./core/draft-details/draft-details.componen
 import {PostDetailsComponent} from "./core/post-details/post-details.component";
 import {PostRejectedDetailsComponent} from "./core/post-rejected-details/post-rejected-details.component";
 import {NotificationsComponent} from "./core/notifications/notifications.component";
+import {confirmLeaveGuard} from "./confirm-leave.guard";
 
 export const routes: Routes = [
   {
@@ -27,7 +28,8 @@ export const routes: Routes = [
   },
   {
     path: 'posts/addPost',
-    component: AddPostFormComponent
+    component: AddPostFormComponent,
+    canDeactivate: [confirmLeaveGuard]
   },
   {
     path: "drafts",

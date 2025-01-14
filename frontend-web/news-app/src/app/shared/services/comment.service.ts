@@ -1,7 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "./auth.service";
-import {CommentRequest} from "../model/CommentRequest.model";
+import {CommentRequest} from "../model/commentRequest.model";
 import {Comment} from "../model/comment.model";
 import {environment} from "../../../environments/environment.development";
 

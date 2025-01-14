@@ -5,7 +5,6 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {PostService} from "../../shared/services/post.service";
 import {PostRequest} from "../../shared/model/postRequest.model";
 import {Router} from "@angular/router";
-import {MatSnackBar} from "@angular/material/snack-bar";
 import {AuthService} from "../../shared/services/auth.service";
 
 @Component({

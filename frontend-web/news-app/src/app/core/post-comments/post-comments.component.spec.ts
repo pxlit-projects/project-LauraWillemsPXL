@@ -1,23 +1,31 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import {PostCommentsComponent} from "./post-comments.component";
+import {CommentService} from "../../shared/services/comment.service";
+import {AuthService} from "../../shared/services/auth.service";
 
-import { PostCommentsComponent } from './post-comments.component';
-
-describe('PostCommentsComponent', () => {
+describe("PostCommentsComponent", () => {
   let component: PostCommentsComponent;
   let fixture: ComponentFixture<PostCommentsComponent>;
+  let commentServiceMock: jasmine.SpyObj<CommentService>;
+  let authServiceMock: jasmine.SpyObj<AuthService>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [PostCommentsComponent]
-    })
-    .compileComponents();
+  beforeEach(() => {
+    commentServiceMock = jasmine.createSpyObj("CommentService", ["getAllComments", "addComment", "updateComment", "deleteComment"]);
+    authServiceMock = jasmine.createSpyObj("AuthService", ["getUserName"]);
+
+    TestBed.configureTestingModule({
+      imports: [PostCommentsComponent],
+      providers: [
+        { provide: CommentService, useValue: commentServiceMock },
+        { provide: AuthService, useValue: authServiceMock }
+      ]
+    });
 
     fixture = TestBed.createComponent(PostCommentsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create the component", () => {
     expect(component).toBeTruthy();
   });
 });
