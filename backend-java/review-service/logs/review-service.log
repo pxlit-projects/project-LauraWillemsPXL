@@ -1,0 +1,14 @@
+2025-01-14T14:57:03.866+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - Starting ReviewControllerTests using Java 23 with PID 8800 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\review-service)
+2025-01-14T14:57:03.868+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:57:03.868+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:57:08.542+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - Started ReviewControllerTests in 5.42 seconds (process running for 18.204)
+2025-01-14T14:57:08.937+0100 DEBUG              [main]                         be.pxl.services.services.ReviewService - Permission denied for user with role editor. Only the editor-in-chief can review a post
+2025-01-14T14:57:09.069+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewController - Getting rejection comment for post with id 1
+2025-01-14T14:57:09.151+0100 DEBUG              [main]                         be.pxl.services.services.ReviewService - Permission denied for user with role editor. Only the editor-in-chief can review a post
+2025-01-14T14:59:38.163+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - Starting ReviewControllerTests using Java 23 with PID 6700 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\review-service)
+2025-01-14T14:59:38.164+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:59:38.165+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:59:42.722+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTests - Started ReviewControllerTests in 5.325 seconds (process running for 17.951)
+2025-01-14T14:59:43.135+0100 DEBUG              [main]                         be.pxl.services.services.ReviewService - Post with id 1 is rejected and needs revision
+2025-01-14T14:59:46.179+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewController - Getting rejection comment for post with id 1
+2025-01-14T14:59:46.301+0100 DEBUG              [main]                         be.pxl.services.services.ReviewService - Post with id 1 is approved and published

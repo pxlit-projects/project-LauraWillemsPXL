@@ -1,0 +1,270 @@
+2025-01-14T13:41:34.034+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 17632 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T13:41:34.035+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T13:41:34.036+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T13:41:38.325+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.123 seconds (process running for 15.719)
+2025-01-14T13:41:38.818+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T13:49:30.041+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 11404 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T13:49:30.042+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T13:49:30.043+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T13:49:34.361+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.062 seconds (process running for 35.224)
+2025-01-14T13:49:34.819+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T13:55:16.528+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 1788 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T13:55:16.528+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T13:55:16.529+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T13:55:20.911+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.332 seconds (process running for 17.643)
+2025-01-14T13:55:21.377+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T13:55:21.501+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T13:59:31.540+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 17824 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T13:59:31.541+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T13:59:31.541+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T13:59:35.808+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.061 seconds (process running for 17.726)
+2025-01-14T14:00:25.484+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 14400 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:00:25.485+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:00:25.486+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:00:29.735+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 4.947 seconds (process running for 17.329)
+2025-01-14T14:01:56.783+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 17780 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:01:56.784+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:01:56.785+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:02:00.993+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.047 seconds (process running for 17.294)
+2025-01-14T14:03:45.500+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostServiceTests using Java 23 with PID 9760 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:03:45.500+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:03:45.501+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:03:50.396+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostServiceTests in 5.678 seconds (process running for 18.788)
+2025-01-14T14:07:30.076+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 23032 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:07:30.077+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:07:30.078+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:07:34.519+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.365 seconds (process running for 18.57)
+2025-01-14T14:09:02.591+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 11256 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:09:02.592+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:09:02.593+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:09:07.105+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.249 seconds (process running for 17.958)
+2025-01-14T14:09:07.627+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:09:07.759+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:11:06.480+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 14196 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:11:06.481+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:11:06.482+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:11:11.107+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.59 seconds (process running for 18.244)
+2025-01-14T14:11:11.584+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:11:11.716+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:12:05.540+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 23144 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:12:05.541+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:12:05.542+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:12:10.429+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.714 seconds (process running for 18.4)
+2025-01-14T14:12:10.907+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:12:11.022+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:13:51.721+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 15536 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:13:51.721+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:13:51.722+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:13:56.515+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.581 seconds (process running for 18.031)
+2025-01-14T14:13:57.062+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 1 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:13:57.124+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 1 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:14:43.069+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 6760 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:14:43.070+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:14:43.071+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:14:47.807+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.453 seconds (process running for 17.907)
+2025-01-14T14:14:48.330+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 1
+2025-01-14T14:14:48.416+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 1
+2025-01-14T14:16:31.320+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 16936 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:16:31.321+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:16:31.322+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:16:35.761+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.141 seconds (process running for 17.585)
+2025-01-14T14:16:36.387+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:16:36.439+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:16:36.539+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:16:36.550+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:16:36.677+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:16:36.688+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:16:36.735+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:16:36.753+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:16:36.792+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:16:36.799+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:16:36.856+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:16:36.869+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:16:36.920+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:16:36.935+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:16:36.974+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approve)
+2025-01-14T14:16:36.981+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Invalid review status
+2025-01-14T14:17:46.013+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 24460 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:17:46.014+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:17:46.014+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:17:50.503+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.318 seconds (process running for 16.934)
+2025-01-14T14:17:50.949+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:17:50.993+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:17:51.174+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:17:51.181+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:17:51.292+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:17:51.330+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:17:51.451+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:17:51.463+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:17:51.535+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:17:51.547+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:17:51.640+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:17:51.650+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:17:51.703+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:17:51.712+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:17:51.761+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approve)
+2025-01-14T14:17:51.767+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Invalid review status
+2025-01-14T14:18:28.029+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 9492 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:18:28.030+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:18:28.030+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:18:32.414+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.159 seconds (process running for 19.223)
+2025-01-14T14:18:32.890+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:18:32.935+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:18:33.122+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:18:34.372+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:18:34.455+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:18:34.475+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:18:34.566+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:18:34.625+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:18:34.753+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:18:34.762+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:18:34.825+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:18:34.834+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:18:34.947+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:18:34.958+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:18:35.004+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T14:18:35.010+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T14:19:24.700+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 17092 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:19:24.701+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:19:24.702+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:19:29.477+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 5.566 seconds (process running for 18.413)
+2025-01-14T14:19:30.039+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:19:30.110+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:19:30.321+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:19:30.328+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:19:30.389+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:19:30.399+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:19:30.460+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:19:30.482+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:19:30.544+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:19:30.551+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:19:30.618+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:19:30.629+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:19:30.683+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:19:30.691+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:19:30.740+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T14:19:30.746+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T14:20:58.035+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 13452 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:20:58.037+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:20:58.038+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:21:07.144+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 10.599 seconds (process running for 25.914)
+2025-01-14T14:21:08.557+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:21:08.842+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:21:09.230+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:21:09.238+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:21:09.692+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:21:09.702+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:21:09.792+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:21:09.809+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:21:09.856+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:21:09.863+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:21:09.938+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:21:09.948+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:21:10.011+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:21:10.020+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:21:10.086+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T14:21:10.094+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T14:39:12.016+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 15108 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:39:12.018+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:39:12.018+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:39:17.860+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 6.972 seconds (process running for 20.793)
+2025-01-14T14:39:18.401+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:39:18.464+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:39:18.718+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:39:18.726+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:39:18.784+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:39:18.798+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:39:18.878+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:18.891+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:18.938+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:18.945+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:19.059+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:39:19.076+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:39:19.145+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:39:19.156+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:39:19.210+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T14:39:19.218+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T14:39:20.245+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:39:20.251+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 1
+2025-01-14T14:39:20.259+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:39:20.261+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:20.264+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts of editor: John Doe
+2025-01-14T14:39:20.268+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 1 to: PostRequest(title=Updated Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:39:20.272+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:39:20.277+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 is approved
+2025-01-14T14:49:38.663+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 744 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T14:49:38.664+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T14:49:38.666+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T14:49:45.094+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 7.685 seconds (process running for 22.002)
+2025-01-14T14:49:45.720+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T14:49:45.809+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:49:46.029+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T14:49:46.037+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T14:49:46.091+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T14:49:46.102+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:49:46.186+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:46.200+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:46.299+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:46.311+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:46.394+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T14:49:46.406+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T14:49:46.483+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T14:49:46.496+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:49:46.720+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T14:49:46.727+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T14:49:47.591+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T14:49:47.596+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (John Doe) with role 'user' is not allowed to view drafts
+2025-01-14T14:49:47.598+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 1
+2025-01-14T14:49:47.607+0100 DEBUG              [main]                         be.pxl.services.services.PostService - No posts found
+2025-01-14T14:49:47.610+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T14:49:47.616+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:47.620+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (Jane Doe) with role 'user' is not allowed to update post with id 1
+2025-01-14T14:49:47.624+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts of editor: John Doe
+2025-01-14T14:49:47.629+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 1 to: PostRequest(title=Updated Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T14:49:47.632+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Invalid review status
+2025-01-14T14:49:47.636+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T14:49:47.639+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T14:49:47.641+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T14:49:47.643+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (Jane Doe) with role 'user' is not allowed to delete post with id 1
+2025-01-14T14:49:47.644+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T14:49:47.646+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T14:49:47.648+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (John Doe) with role 'user' is not allowed to view notifications
+2025-01-14T14:49:47.650+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 is approved
+2025-01-14T15:22:05.925+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Starting PostControllerTests using Java 23 with PID 25700 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\post-service)
+2025-01-14T15:22:05.926+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T15:22:05.927+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T15:22:12.849+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTests - Started PostControllerTests in 7.947 seconds (process running for 22.066)
+2025-01-14T15:22:13.498+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Finding post with id 1
+2025-01-14T15:22:13.577+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T15:22:13.785+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Deleting draft with id 2
+2025-01-14T15:22:13.793+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 2
+2025-01-14T15:22:13.845+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting notifications of author John Doe
+2025-01-14T15:22:13.854+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T15:22:13.929+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:13.946+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:13.998+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Updating draft with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:14.010+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 5 to: PostRequest(title=Updated Title, content=content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:14.105+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all posts of Alice Smith
+2025-01-14T15:22:14.114+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts for user: Alice Smith
+2025-01-14T15:22:14.183+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Getting all drafts of John Doe
+2025-01-14T15:22:14.198+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T15:22:14.258+0100 DEBUG              [main]                         be.pxl.services.controller.PostController - Reviewing post with id 10: ReviewRequest(review=approved)
+2025-01-14T15:22:14.265+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 10 is approved
+2025-01-14T15:22:15.550+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Retrieving post with id 1
+2025-01-14T15:22:15.557+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (John Doe) with role 'user' is not allowed to view drafts
+2025-01-14T15:22:15.560+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Deleting draft with id 1
+2025-01-14T15:22:15.574+0100 DEBUG              [main]                         be.pxl.services.services.PostService - No posts found
+2025-01-14T15:22:15.576+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting notifications of author: John Doe
+2025-01-14T15:22:15.578+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Adding a new post with details: PostRequest(title=Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:15.582+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (Jane Doe) with role 'user' is not allowed to update post with id 1
+2025-01-14T15:22:15.585+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all posts of editor: John Doe
+2025-01-14T15:22:15.588+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Updating post with id 1 to: PostRequest(title=Updated Title, content=Content, tags=[tag1, tag2], author=John Doe, isDraft=false)
+2025-01-14T15:22:15.590+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Invalid review status
+2025-01-14T15:22:15.592+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T15:22:15.596+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T15:22:15.597+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Getting all drafts of editor: John Doe
+2025-01-14T15:22:15.599+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (Jane Doe) with role 'user' is not allowed to delete post with id 1
+2025-01-14T15:22:15.600+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T15:22:15.602+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 not found
+2025-01-14T15:22:15.603+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Permission denied. User (John Doe) with role 'user' is not allowed to view notifications
+2025-01-14T15:22:15.605+0100 DEBUG              [main]                         be.pxl.services.services.PostService - Post with id 1 is approved

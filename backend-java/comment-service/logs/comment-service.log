@@ -1,0 +1,40 @@
+2025-01-14T15:20:30.979+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Starting CommentControllerTests using Java 23 with PID 25892 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\comment-service)
+2025-01-14T15:20:30.980+0100 DEBUG              [main]                         be.pxl.services.controller.CommentControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T15:20:30.981+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T15:20:37.147+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Started CommentControllerTests in 7.113 seconds (process running for 19.939)
+2025-01-14T15:20:37.753+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Deleting comment with id 1
+2025-01-14T15:20:37.818+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Deleting comment with id 1
+2025-01-14T15:20:38.071+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:20:38.097+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:20:38.157+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Retrieving all comments
+2025-01-14T15:20:38.166+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Retrieving all comments
+2025-01-14T15:20:38.201+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Adding a new comment with details: CommentRequest(postId=1, comment=This is a comment, createdBy=John Doe)
+2025-01-14T15:21:33.074+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Starting CommentControllerTests using Java 23 with PID 25480 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\comment-service)
+2025-01-14T15:21:33.075+0100 DEBUG              [main]                         be.pxl.services.controller.CommentControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T15:21:33.076+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T15:21:37.426+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Started CommentControllerTests in 5.38 seconds (process running for 16.871)
+2025-01-14T15:21:37.881+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Deleting comment with id 1
+2025-01-14T15:21:37.930+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Deleting comment with id 1
+2025-01-14T15:21:38.129+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:21:38.162+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:21:38.243+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Retrieving all comments
+2025-01-14T15:21:38.250+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Retrieving all comments
+2025-01-14T15:22:40.942+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Starting CommentControllerTests using Java 23 with PID 2856 (started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\comment-service)
+2025-01-14T15:22:40.943+0100 DEBUG              [main]                         be.pxl.services.controller.CommentControllerTests - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-14T15:22:40.945+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-14T15:22:47.868+0100 INFO               [main]                         be.pxl.services.controller.CommentControllerTests - Started CommentControllerTests in 8.144 seconds (process running for 23.107)
+2025-01-14T15:22:48.838+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Deleting comment with id 1
+2025-01-14T15:22:48.914+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Deleting comment with id 1
+2025-01-14T15:22:49.184+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:22:49.211+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Updating comment with id 2 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:22:49.305+0100 DEBUG              [main]                         be.pxl.services.controller.CommentController - Retrieving all comments
+2025-01-14T15:22:49.313+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Retrieving all comments
+2025-01-14T15:22:50.235+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Comment with id 1 not found
+2025-01-14T15:22:50.241+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Deleting comment with id 1
+2025-01-14T15:22:50.250+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - User Jane Doe is not allowed to update this comment
+2025-01-14T15:22:50.253+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Comment with id 1 not found
+2025-01-14T15:22:50.256+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - User Jane Doe is not allowed to delete this comment
+2025-01-14T15:22:50.260+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Updating comment with id 1 to: CommentRequest(postId=1, comment=Updated comment, createdBy=John Doe)
+2025-01-14T15:22:50.264+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - The post for the created comment does not exist
+2025-01-14T15:22:50.267+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Retrieving all comments
+2025-01-14T15:22:50.271+0100 DEBUG              [main]                         be.pxl.services.services.CommentService - Adding a new comment with details: Comment(id=null, postId=1, comment=This is a comment, createdBy=John Doe, createdAt=Tue Jan 14 15:22:50 CET 2025)

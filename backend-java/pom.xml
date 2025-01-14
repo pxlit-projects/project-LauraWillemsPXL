@@ -38,6 +38,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring.cloud-version>2022.0.4</spring.cloud-version>
+		<sonar.login>squ_a4237f51177f7744530bd4d89ef030ad6b9c4142</sonar.login>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -94,6 +95,30 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version> <!-- or another version -->
+				<executions>
+					<execution>
+						<id>prepare-agent</id> <!-- Unique id for this execution -->
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id> <!-- Unique id for this execution -->
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.9.1.2184</version>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
