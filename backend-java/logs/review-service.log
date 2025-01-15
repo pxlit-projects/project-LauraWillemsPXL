@@ -17,3 +17,23 @@
 2025-01-14T09:19:33.305+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
 2025-01-14T09:19:33.305+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
 2025-01-14T09:19:39.836+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.584 seconds (process running for 8.391)
+2025-01-15T09:00:01.627+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 23 with PID 37768 (C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\review-service\target\classes started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java)
+2025-01-15T09:00:01.637+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-15T09:00:01.638+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-15T09:00:08.664+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 8.198 seconds (process running for 9.02)
+2025-01-15T09:12:05.452+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 23 with PID 36020 (C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java\review-service\target\classes started by laura in C:\Users\laura\Documents\PXL\3TIN\Fullstack_Java\PE\project-LauraWillemsPXL\backend-java)
+2025-01-15T09:12:05.454+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-01-15T09:12:05.454+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-15T09:12:12.208+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.837 seconds (process running for 8.651)
+2025-01-15T09:16:17.581+0100 DEBUG              [http-nio-8082-exec-1]         be.pxl.services.services.ReviewService - Post with id 52 is approved and published
+2025-01-15T09:16:18.055+0100 DEBUG              [http-nio-8082-exec-1]         be.pxl.services.controller.ReviewController - Post with id 52 is approved
+2025-01-15T09:16:29.616+0100 DEBUG              [http-nio-8082-exec-2]         be.pxl.services.services.ReviewService - Post with id 53 is approved and published
+2025-01-15T09:16:29.701+0100 DEBUG              [http-nio-8082-exec-2]         be.pxl.services.controller.ReviewController - Post with id 53 is approved
+2025-01-15T09:18:32.004+0100 DEBUG              [http-nio-8082-exec-4]         be.pxl.services.services.ReviewService - Post with id 54 is approved and published
+2025-01-15T09:18:32.078+0100 DEBUG              [http-nio-8082-exec-4]         be.pxl.services.controller.ReviewController - Post with id 54 is approved
+2025-01-15T09:18:34.501+0100 DEBUG              [http-nio-8082-exec-5]         be.pxl.services.services.ReviewService - Post with id 56 is approved and published
+2025-01-15T09:18:34.574+0100 DEBUG              [http-nio-8082-exec-5]         be.pxl.services.controller.ReviewController - Post with id 56 is approved
+2025-01-15T09:18:36.523+0100 DEBUG              [http-nio-8082-exec-6]         be.pxl.services.services.ReviewService - Post with id 57 is approved and published
+2025-01-15T09:18:36.594+0100 DEBUG              [http-nio-8082-exec-6]         be.pxl.services.controller.ReviewController - Post with id 57 is approved
+2025-01-15T09:18:39.068+0100 DEBUG              [http-nio-8082-exec-7]         be.pxl.services.services.ReviewService - Post with id 58 is approved and published
+2025-01-15T09:18:39.132+0100 DEBUG              [http-nio-8082-exec-7]         be.pxl.services.controller.ReviewController - Post with id 58 is approved

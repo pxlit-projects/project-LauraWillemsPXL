@@ -34,7 +34,7 @@ export class PostOverviewComponent implements OnInit{
   role!: string;
   authorName: string = "";
   tag: string = "";
-  publishedDate: Date = new Date();
+  publishedDate: Date | null = new Date();
   tags: string[] = [];
 
   ngOnInit(): void {
@@ -77,7 +77,7 @@ export class PostOverviewComponent implements OnInit{
   clearFilters(): void {
     this.authorName = "";
     this.tag = "";
-    this.publishedDate = new Date();
+    this.publishedDate = null;
     this.filterPosts();
   }
 
